@@ -1,0 +1,1671 @@
+{
+  "nodes": [
+    {
+      "id": "Billie Eilish",
+      "group": "artist",
+      "val": 3790,
+      "img": null
+    },
+    {
+      "id": "pop",
+      "group": "tag",
+      "val": 40
+    },
+    {
+      "id": "indie pop",
+      "group": "tag",
+      "val": 10
+    },
+    {
+      "id": "electropop",
+      "group": "tag",
+      "val": 10
+    },
+    {
+      "id": "art pop",
+      "group": "tag",
+      "val": 5
+    },
+    {
+      "id": "The Weeknd",
+      "group": "artist",
+      "val": 3245,
+      "img": null
+    },
+    {
+      "id": "rnb",
+      "group": "tag",
+      "val": 75
+    },
+    {
+      "id": "electronic",
+      "group": "tag",
+      "val": 15
+    },
+    {
+      "id": "dubstep",
+      "group": "tag",
+      "val": 5
+    },
+    {
+      "id": "canadian",
+      "group": "tag",
+      "val": 5
+    },
+    {
+      "id": "The Strokes",
+      "group": "artist",
+      "val": 2484,
+      "img": null
+    },
+    {
+      "id": "indie rock",
+      "group": "tag",
+      "val": 25
+    },
+    {
+      "id": "indie",
+      "group": "tag",
+      "val": 25
+    },
+    {
+      "id": "rock",
+      "group": "tag",
+      "val": 75
+    },
+    {
+      "id": "alternative",
+      "group": "tag",
+      "val": 35
+    },
+    {
+      "id": "Arctic Monkeys",
+      "group": "artist",
+      "val": 2375,
+      "img": null
+    },
+    {
+      "id": "british",
+      "group": "tag",
+      "val": 15
+    },
+    {
+      "id": "Slipknot",
+      "group": "artist",
+      "val": 2283,
+      "img": null
+    },
+    {
+      "id": "nu metal",
+      "group": "tag",
+      "val": 10
+    },
+    {
+      "id": "metal",
+      "group": "tag",
+      "val": 10
+    },
+    {
+      "id": "heavy metal",
+      "group": "tag",
+      "val": 5
+    },
+    {
+      "id": "nu-metal",
+      "group": "tag",
+      "val": 5
+    },
+    {
+      "id": "Libido",
+      "group": "artist",
+      "val": 2042,
+      "img": null
+    },
+    {
+      "id": "rock peruano",
+      "group": "tag",
+      "val": 10
+    },
+    {
+      "id": "rock latino",
+      "group": "tag",
+      "val": 5
+    },
+    {
+      "id": "rock en espanol",
+      "group": "tag",
+      "val": 10
+    },
+    {
+      "id": "Travis Scott",
+      "group": "artist",
+      "val": 1862,
+      "img": null
+    },
+    {
+      "id": "hip-hop",
+      "group": "tag",
+      "val": 70
+    },
+    {
+      "id": "trap",
+      "group": "tag",
+      "val": 40
+    },
+    {
+      "id": "rap",
+      "group": "tag",
+      "val": 60
+    },
+    {
+      "id": "travis scott",
+      "group": "tag",
+      "val": 5
+    },
+    {
+      "id": "Bad Bunny",
+      "group": "artist",
+      "val": 1856,
+      "img": null
+    },
+    {
+      "id": "reggaeton",
+      "group": "tag",
+      "val": 15
+    },
+    {
+      "id": "latin",
+      "group": "tag",
+      "val": 15
+    },
+    {
+      "id": "puerto rico",
+      "group": "tag",
+      "val": 5
+    },
+    {
+      "id": "Tyler, The Creator",
+      "group": "artist",
+      "val": 1848,
+      "img": null
+    },
+    {
+      "id": "ofwgkta",
+      "group": "tag",
+      "val": 5
+    },
+    {
+      "id": "underground hip-hop",
+      "group": "tag",
+      "val": 5
+    },
+    {
+      "id": "Joji",
+      "group": "artist",
+      "val": 1803,
+      "img": null
+    },
+    {
+      "id": "lo-fi",
+      "group": "tag",
+      "val": 5
+    },
+    {
+      "id": "alternative rnb",
+      "group": "tag",
+      "val": 20
+    },
+    {
+      "id": "Kanye West",
+      "group": "artist",
+      "val": 1530,
+      "img": null
+    },
+    {
+      "id": "hip hop",
+      "group": "tag",
+      "val": 20
+    },
+    {
+      "id": "Doja Cat",
+      "group": "artist",
+      "val": 1267,
+      "img": null
+    },
+    {
+      "id": "Kendrick Lamar",
+      "group": "artist",
+      "val": 1179,
+      "img": null
+    },
+    {
+      "id": "west coast",
+      "group": "tag",
+      "val": 5
+    },
+    {
+      "id": "Natanael Cano",
+      "group": "artist",
+      "val": 1147,
+      "img": null
+    },
+    {
+      "id": "corridos tumbados",
+      "group": "tag",
+      "val": 25
+    },
+    {
+      "id": "corridos",
+      "group": "tag",
+      "val": 20
+    },
+    {
+      "id": "regional mexicano",
+      "group": "tag",
+      "val": 5
+    },
+    {
+      "id": "mexico",
+      "group": "tag",
+      "val": 30
+    },
+    {
+      "id": "Playboi Carti",
+      "group": "artist",
+      "val": 1142,
+      "img": null
+    },
+    {
+      "id": "cloud rap",
+      "group": "tag",
+      "val": 15
+    },
+    {
+      "id": "Nirvana",
+      "group": "artist",
+      "val": 990,
+      "img": null
+    },
+    {
+      "id": "grunge",
+      "group": "tag",
+      "val": 5
+    },
+    {
+      "id": "alternative rock",
+      "group": "tag",
+      "val": 25
+    },
+    {
+      "id": "Fuerza Regida",
+      "group": "artist",
+      "val": 990,
+      "img": null
+    },
+    {
+      "id": "sierreno",
+      "group": "tag",
+      "val": 15
+    },
+    {
+      "id": "Peso Pluma",
+      "group": "artist",
+      "val": 970,
+      "img": null
+    },
+    {
+      "id": "corrido tumbado",
+      "group": "tag",
+      "val": 5
+    },
+    {
+      "id": "Lil Tecca",
+      "group": "artist",
+      "val": 956,
+      "img": null
+    },
+    {
+      "id": "Drake",
+      "group": "artist",
+      "val": 953,
+      "img": null
+    },
+    {
+      "id": "SZA",
+      "group": "artist",
+      "val": 928,
+      "img": null
+    },
+    {
+      "id": "soul",
+      "group": "tag",
+      "val": 25
+    },
+    {
+      "id": "Dua Lipa",
+      "group": "artist",
+      "val": 919,
+      "img": null
+    },
+    {
+      "id": "synthpop",
+      "group": "tag",
+      "val": 5
+    },
+    {
+      "id": "Ariana Grande",
+      "group": "artist",
+      "val": 905,
+      "img": null
+    },
+    {
+      "id": "female vocalists",
+      "group": "tag",
+      "val": 15
+    },
+    {
+      "id": "ariana grande",
+      "group": "tag",
+      "val": 5
+    },
+    {
+      "id": "Brent Faiyaz",
+      "group": "artist",
+      "val": 880,
+      "img": null
+    },
+    {
+      "id": "Junior H",
+      "group": "artist",
+      "val": 857,
+      "img": null
+    },
+    {
+      "id": "Don Toliver",
+      "group": "artist",
+      "val": 820,
+      "img": null
+    },
+    {
+      "id": "The Neighbourhood",
+      "group": "artist",
+      "val": 799,
+      "img": null
+    },
+    {
+      "id": "Bruno Mars",
+      "group": "artist",
+      "val": 793,
+      "img": null
+    },
+    {
+      "id": "male vocalists",
+      "group": "tag",
+      "val": 5
+    },
+    {
+      "id": "r&b",
+      "group": "tag",
+      "val": 10
+    },
+    {
+      "id": "Kali Uchis",
+      "group": "artist",
+      "val": 778,
+      "img": null
+    },
+    {
+      "id": "neo-soul",
+      "group": "tag",
+      "val": 5
+    },
+    {
+      "id": "Adele",
+      "group": "artist",
+      "val": 761,
+      "img": null
+    },
+    {
+      "id": "singer-songwriter",
+      "group": "tag",
+      "val": 5
+    },
+    {
+      "id": "Olivia Rodrigo",
+      "group": "artist",
+      "val": 685,
+      "img": null
+    },
+    {
+      "id": "pop rock",
+      "group": "tag",
+      "val": 5
+    },
+    {
+      "id": "Mar de Copas",
+      "group": "artist",
+      "val": 679,
+      "img": null
+    },
+    {
+      "id": "peru",
+      "group": "tag",
+      "val": 5
+    },
+    {
+      "id": "peruvian",
+      "group": "tag",
+      "val": 5
+    },
+    {
+      "id": "Grupo Frontera",
+      "group": "artist",
+      "val": 677,
+      "img": null
+    },
+    {
+      "id": "norteno",
+      "group": "tag",
+      "val": 5
+    },
+    {
+      "id": "System Of A Down",
+      "group": "artist",
+      "val": 660,
+      "img": null
+    },
+    {
+      "id": "alternative metal",
+      "group": "tag",
+      "val": 5
+    },
+    {
+      "id": "XXXTENTACION",
+      "group": "artist",
+      "val": 658,
+      "img": null
+    },
+    {
+      "id": "Post Malone",
+      "group": "artist",
+      "val": 599,
+      "img": null
+    },
+    {
+      "id": "Feid",
+      "group": "artist",
+      "val": 599,
+      "img": null
+    },
+    {
+      "id": "groove metal",
+      "group": "tag",
+      "val": 5
+    },
+    {
+      "id": "colombia",
+      "group": "tag",
+      "val": 5
+    },
+    {
+      "id": "The Killers",
+      "group": "artist",
+      "val": 589,
+      "img": null
+    },
+    {
+      "id": "Steve Lacy",
+      "group": "artist",
+      "val": 577,
+      "img": null
+    },
+    {
+      "id": "free jazz",
+      "group": "tag",
+      "val": 5
+    },
+    {
+      "id": "jazz",
+      "group": "tag",
+      "val": 5
+    },
+    {
+      "id": "saxophone",
+      "group": "tag",
+      "val": 5
+    },
+    {
+      "id": "Juice WRLD",
+      "group": "artist",
+      "val": 556,
+      "img": null
+    },
+    {
+      "id": "emo rap",
+      "group": "tag",
+      "val": 5
+    },
+    {
+      "id": "The Raconteurs",
+      "group": "artist",
+      "val": 529,
+      "img": null
+    },
+    {
+      "id": "Royal Blood",
+      "group": "artist",
+      "val": 502,
+      "img": null
+    },
+    {
+      "id": "garage rock",
+      "group": "tag",
+      "val": 5
+    },
+    {
+      "id": "blues rock",
+      "group": "tag",
+      "val": 5
+    },
+    {
+      "id": "ROSALÍA",
+      "group": "artist",
+      "val": 501,
+      "img": null
+    },
+    {
+      "id": "flamenco",
+      "group": "tag",
+      "val": 5
+    },
+    {
+      "id": "spanish",
+      "group": "tag",
+      "val": 5
+    },
+    {
+      "id": "flamenco nuevo",
+      "group": "tag",
+      "val": 5
+    },
+    {
+      "id": "Green Day",
+      "group": "artist",
+      "val": 494,
+      "img": null
+    },
+    {
+      "id": "punk rock",
+      "group": "tag",
+      "val": 5
+    },
+    {
+      "id": "punk",
+      "group": "tag",
+      "val": 5
+    },
+    {
+      "id": "pop punk",
+      "group": "tag",
+      "val": 5
+    },
+    {
+      "id": "Eslabon Armado",
+      "group": "artist",
+      "val": 478,
+      "img": null
+    },
+    {
+      "id": "Frank Ocean",
+      "group": "artist",
+      "val": 473,
+      "img": null
+    },
+    {
+      "id": "d4vd",
+      "group": "artist",
+      "val": 459,
+      "img": null
+    },
+    {
+      "id": "dream pop",
+      "group": "tag",
+      "val": 5
+    },
+    {
+      "id": "The White Stripes",
+      "group": "artist",
+      "val": 457,
+      "img": null
+    },
+    {
+      "id": "Soda Stereo",
+      "group": "artist",
+      "val": 450,
+      "img": null
+    },
+    {
+      "id": "rock argentino",
+      "group": "tag",
+      "val": 5
+    },
+    {
+      "id": "argentina",
+      "group": "tag",
+      "val": 5
+    },
+    {
+      "id": "Red Hot Chili Peppers",
+      "group": "artist",
+      "val": 433,
+      "img": null
+    },
+    {
+      "id": "funk rock",
+      "group": "tag",
+      "val": 5
+    }
+  ],
+  "links": [
+    {
+      "source": "Billie Eilish",
+      "target": "pop",
+      "value": 1
+    },
+    {
+      "source": "Billie Eilish",
+      "target": "indie pop",
+      "value": 1
+    },
+    {
+      "source": "Billie Eilish",
+      "target": "electropop",
+      "value": 1
+    },
+    {
+      "source": "Billie Eilish",
+      "target": "art pop",
+      "value": 1
+    },
+    {
+      "source": "The Weeknd",
+      "target": "rnb",
+      "value": 1
+    },
+    {
+      "source": "The Weeknd",
+      "target": "electronic",
+      "value": 1
+    },
+    {
+      "source": "The Weeknd",
+      "target": "dubstep",
+      "value": 1
+    },
+    {
+      "source": "The Weeknd",
+      "target": "canadian",
+      "value": 1
+    },
+    {
+      "source": "The Strokes",
+      "target": "indie rock",
+      "value": 1
+    },
+    {
+      "source": "The Strokes",
+      "target": "indie",
+      "value": 1
+    },
+    {
+      "source": "The Strokes",
+      "target": "rock",
+      "value": 1
+    },
+    {
+      "source": "The Strokes",
+      "target": "alternative",
+      "value": 1
+    },
+    {
+      "source": "Arctic Monkeys",
+      "target": "indie rock",
+      "value": 1
+    },
+    {
+      "source": "Arctic Monkeys",
+      "target": "indie",
+      "value": 1
+    },
+    {
+      "source": "Arctic Monkeys",
+      "target": "british",
+      "value": 1
+    },
+    {
+      "source": "Arctic Monkeys",
+      "target": "alternative",
+      "value": 1
+    },
+    {
+      "source": "Slipknot",
+      "target": "nu metal",
+      "value": 1
+    },
+    {
+      "source": "Slipknot",
+      "target": "metal",
+      "value": 1
+    },
+    {
+      "source": "Slipknot",
+      "target": "heavy metal",
+      "value": 1
+    },
+    {
+      "source": "Slipknot",
+      "target": "nu-metal",
+      "value": 1
+    },
+    {
+      "source": "Libido",
+      "target": "rock peruano",
+      "value": 1
+    },
+    {
+      "source": "Libido",
+      "target": "rock",
+      "value": 1
+    },
+    {
+      "source": "Libido",
+      "target": "rock latino",
+      "value": 1
+    },
+    {
+      "source": "Libido",
+      "target": "rock en espanol",
+      "value": 1
+    },
+    {
+      "source": "Travis Scott",
+      "target": "hip-hop",
+      "value": 1
+    },
+    {
+      "source": "Travis Scott",
+      "target": "trap",
+      "value": 1
+    },
+    {
+      "source": "Travis Scott",
+      "target": "rap",
+      "value": 1
+    },
+    {
+      "source": "Travis Scott",
+      "target": "travis scott",
+      "value": 1
+    },
+    {
+      "source": "Bad Bunny",
+      "target": "reggaeton",
+      "value": 1
+    },
+    {
+      "source": "Bad Bunny",
+      "target": "latin",
+      "value": 1
+    },
+    {
+      "source": "Bad Bunny",
+      "target": "trap",
+      "value": 1
+    },
+    {
+      "source": "Bad Bunny",
+      "target": "puerto rico",
+      "value": 1
+    },
+    {
+      "source": "Tyler, The Creator",
+      "target": "hip-hop",
+      "value": 1
+    },
+    {
+      "source": "Tyler, The Creator",
+      "target": "rap",
+      "value": 1
+    },
+    {
+      "source": "Tyler, The Creator",
+      "target": "ofwgkta",
+      "value": 1
+    },
+    {
+      "source": "Tyler, The Creator",
+      "target": "underground hip-hop",
+      "value": 1
+    },
+    {
+      "source": "Joji",
+      "target": "lo-fi",
+      "value": 1
+    },
+    {
+      "source": "Joji",
+      "target": "rnb",
+      "value": 1
+    },
+    {
+      "source": "Joji",
+      "target": "hip-hop",
+      "value": 1
+    },
+    {
+      "source": "Joji",
+      "target": "alternative rnb",
+      "value": 1
+    },
+    {
+      "source": "Kanye West",
+      "target": "hip-hop",
+      "value": 1
+    },
+    {
+      "source": "Kanye West",
+      "target": "rap",
+      "value": 1
+    },
+    {
+      "source": "Kanye West",
+      "target": "hip hop",
+      "value": 1
+    },
+    {
+      "source": "Kanye West",
+      "target": "rnb",
+      "value": 1
+    },
+    {
+      "source": "Doja Cat",
+      "target": "pop",
+      "value": 1
+    },
+    {
+      "source": "Doja Cat",
+      "target": "rnb",
+      "value": 1
+    },
+    {
+      "source": "Doja Cat",
+      "target": "rap",
+      "value": 1
+    },
+    {
+      "source": "Doja Cat",
+      "target": "hip-hop",
+      "value": 1
+    },
+    {
+      "source": "Kendrick Lamar",
+      "target": "hip-hop",
+      "value": 1
+    },
+    {
+      "source": "Kendrick Lamar",
+      "target": "rap",
+      "value": 1
+    },
+    {
+      "source": "Kendrick Lamar",
+      "target": "west coast",
+      "value": 1
+    },
+    {
+      "source": "Kendrick Lamar",
+      "target": "hip hop",
+      "value": 1
+    },
+    {
+      "source": "Natanael Cano",
+      "target": "corridos tumbados",
+      "value": 1
+    },
+    {
+      "source": "Natanael Cano",
+      "target": "corridos",
+      "value": 1
+    },
+    {
+      "source": "Natanael Cano",
+      "target": "regional mexicano",
+      "value": 1
+    },
+    {
+      "source": "Natanael Cano",
+      "target": "mexico",
+      "value": 1
+    },
+    {
+      "source": "Playboi Carti",
+      "target": "trap",
+      "value": 1
+    },
+    {
+      "source": "Playboi Carti",
+      "target": "cloud rap",
+      "value": 1
+    },
+    {
+      "source": "Playboi Carti",
+      "target": "rap",
+      "value": 1
+    },
+    {
+      "source": "Playboi Carti",
+      "target": "hip-hop",
+      "value": 1
+    },
+    {
+      "source": "Nirvana",
+      "target": "grunge",
+      "value": 1
+    },
+    {
+      "source": "Nirvana",
+      "target": "rock",
+      "value": 1
+    },
+    {
+      "source": "Nirvana",
+      "target": "alternative rock",
+      "value": 1
+    },
+    {
+      "source": "Nirvana",
+      "target": "alternative",
+      "value": 1
+    },
+    {
+      "source": "Fuerza Regida",
+      "target": "corridos tumbados",
+      "value": 1
+    },
+    {
+      "source": "Fuerza Regida",
+      "target": "mexico",
+      "value": 1
+    },
+    {
+      "source": "Fuerza Regida",
+      "target": "sierreno",
+      "value": 1
+    },
+    {
+      "source": "Fuerza Regida",
+      "target": "corridos",
+      "value": 1
+    },
+    {
+      "source": "Peso Pluma",
+      "target": "mexico",
+      "value": 1
+    },
+    {
+      "source": "Peso Pluma",
+      "target": "reggaeton",
+      "value": 1
+    },
+    {
+      "source": "Peso Pluma",
+      "target": "corridos tumbados",
+      "value": 1
+    },
+    {
+      "source": "Peso Pluma",
+      "target": "corrido tumbado",
+      "value": 1
+    },
+    {
+      "source": "Lil Tecca",
+      "target": "rap",
+      "value": 1
+    },
+    {
+      "source": "Lil Tecca",
+      "target": "hip-hop",
+      "value": 1
+    },
+    {
+      "source": "Lil Tecca",
+      "target": "trap",
+      "value": 1
+    },
+    {
+      "source": "Lil Tecca",
+      "target": "hip hop",
+      "value": 1
+    },
+    {
+      "source": "Drake",
+      "target": "hip-hop",
+      "value": 1
+    },
+    {
+      "source": "Drake",
+      "target": "rap",
+      "value": 1
+    },
+    {
+      "source": "Drake",
+      "target": "rnb",
+      "value": 1
+    },
+    {
+      "source": "Drake",
+      "target": "hip hop",
+      "value": 1
+    },
+    {
+      "source": "SZA",
+      "target": "rnb",
+      "value": 1
+    },
+    {
+      "source": "SZA",
+      "target": "soul",
+      "value": 1
+    },
+    {
+      "source": "SZA",
+      "target": "electronic",
+      "value": 1
+    },
+    {
+      "source": "SZA",
+      "target": "alternative rnb",
+      "value": 1
+    },
+    {
+      "source": "Dua Lipa",
+      "target": "pop",
+      "value": 1
+    },
+    {
+      "source": "Dua Lipa",
+      "target": "synthpop",
+      "value": 1
+    },
+    {
+      "source": "Dua Lipa",
+      "target": "electropop",
+      "value": 1
+    },
+    {
+      "source": "Dua Lipa",
+      "target": "british",
+      "value": 1
+    },
+    {
+      "source": "Ariana Grande",
+      "target": "pop",
+      "value": 1
+    },
+    {
+      "source": "Ariana Grande",
+      "target": "rnb",
+      "value": 1
+    },
+    {
+      "source": "Ariana Grande",
+      "target": "female vocalists",
+      "value": 1
+    },
+    {
+      "source": "Ariana Grande",
+      "target": "ariana grande",
+      "value": 1
+    },
+    {
+      "source": "Brent Faiyaz",
+      "target": "rnb",
+      "value": 1
+    },
+    {
+      "source": "Brent Faiyaz",
+      "target": "soul",
+      "value": 1
+    },
+    {
+      "source": "Brent Faiyaz",
+      "target": "electronic",
+      "value": 1
+    },
+    {
+      "source": "Brent Faiyaz",
+      "target": "alternative rnb",
+      "value": 1
+    },
+    {
+      "source": "Junior H",
+      "target": "corridos tumbados",
+      "value": 1
+    },
+    {
+      "source": "Junior H",
+      "target": "mexico",
+      "value": 1
+    },
+    {
+      "source": "Junior H",
+      "target": "corridos",
+      "value": 1
+    },
+    {
+      "source": "Junior H",
+      "target": "sierreno",
+      "value": 1
+    },
+    {
+      "source": "Don Toliver",
+      "target": "rap",
+      "value": 1
+    },
+    {
+      "source": "Don Toliver",
+      "target": "trap",
+      "value": 1
+    },
+    {
+      "source": "Don Toliver",
+      "target": "hip-hop",
+      "value": 1
+    },
+    {
+      "source": "Don Toliver",
+      "target": "rnb",
+      "value": 1
+    },
+    {
+      "source": "The Neighbourhood",
+      "target": "indie",
+      "value": 1
+    },
+    {
+      "source": "The Neighbourhood",
+      "target": "indie rock",
+      "value": 1
+    },
+    {
+      "source": "The Neighbourhood",
+      "target": "indie pop",
+      "value": 1
+    },
+    {
+      "source": "The Neighbourhood",
+      "target": "rock",
+      "value": 1
+    },
+    {
+      "source": "Bruno Mars",
+      "target": "pop",
+      "value": 1
+    },
+    {
+      "source": "Bruno Mars",
+      "target": "rnb",
+      "value": 1
+    },
+    {
+      "source": "Bruno Mars",
+      "target": "male vocalists",
+      "value": 1
+    },
+    {
+      "source": "Bruno Mars",
+      "target": "r&b",
+      "value": 1
+    },
+    {
+      "source": "Kali Uchis",
+      "target": "rnb",
+      "value": 1
+    },
+    {
+      "source": "Kali Uchis",
+      "target": "neo-soul",
+      "value": 1
+    },
+    {
+      "source": "Kali Uchis",
+      "target": "alternative rnb",
+      "value": 1
+    },
+    {
+      "source": "Kali Uchis",
+      "target": "soul",
+      "value": 1
+    },
+    {
+      "source": "Adele",
+      "target": "soul",
+      "value": 1
+    },
+    {
+      "source": "Adele",
+      "target": "female vocalists",
+      "value": 1
+    },
+    {
+      "source": "Adele",
+      "target": "british",
+      "value": 1
+    },
+    {
+      "source": "Adele",
+      "target": "singer-songwriter",
+      "value": 1
+    },
+    {
+      "source": "Olivia Rodrigo",
+      "target": "pop",
+      "value": 1
+    },
+    {
+      "source": "Olivia Rodrigo",
+      "target": "pop rock",
+      "value": 1
+    },
+    {
+      "source": "Olivia Rodrigo",
+      "target": "female vocalists",
+      "value": 1
+    },
+    {
+      "source": "Olivia Rodrigo",
+      "target": "rock",
+      "value": 1
+    },
+    {
+      "source": "Mar de Copas",
+      "target": "rock",
+      "value": 1
+    },
+    {
+      "source": "Mar de Copas",
+      "target": "rock peruano",
+      "value": 1
+    },
+    {
+      "source": "Mar de Copas",
+      "target": "peru",
+      "value": 1
+    },
+    {
+      "source": "Mar de Copas",
+      "target": "peruvian",
+      "value": 1
+    },
+    {
+      "source": "Grupo Frontera",
+      "target": "norteno",
+      "value": 1
+    },
+    {
+      "source": "Grupo Frontera",
+      "target": "latin",
+      "value": 1
+    },
+    {
+      "source": "Grupo Frontera",
+      "target": "rnb",
+      "value": 1
+    },
+    {
+      "source": "Grupo Frontera",
+      "target": "mexico",
+      "value": 1
+    },
+    {
+      "source": "System Of A Down",
+      "target": "alternative metal",
+      "value": 1
+    },
+    {
+      "source": "System Of A Down",
+      "target": "metal",
+      "value": 1
+    },
+    {
+      "source": "System Of A Down",
+      "target": "nu metal",
+      "value": 1
+    },
+    {
+      "source": "System Of A Down",
+      "target": "rock",
+      "value": 1
+    },
+    {
+      "source": "XXXTENTACION",
+      "target": "rap",
+      "value": 1
+    },
+    {
+      "source": "XXXTENTACION",
+      "target": "hip-hop",
+      "value": 1
+    },
+    {
+      "source": "XXXTENTACION",
+      "target": "cloud rap",
+      "value": 1
+    },
+    {
+      "source": "XXXTENTACION",
+      "target": "trap",
+      "value": 1
+    },
+    {
+      "source": "Post Malone",
+      "target": "hip-hop",
+      "value": 1
+    },
+    {
+      "source": "Post Malone",
+      "target": "rap",
+      "value": 1
+    },
+    {
+      "source": "Post Malone",
+      "target": "trap",
+      "value": 1
+    },
+    {
+      "source": "Post Malone",
+      "target": "cloud rap",
+      "value": 1
+    },
+    {
+      "source": "Feid",
+      "target": "reggaeton",
+      "value": 1
+    },
+    {
+      "source": "Feid",
+      "target": "groove metal",
+      "value": 1
+    },
+    {
+      "source": "Feid",
+      "target": "colombia",
+      "value": 1
+    },
+    {
+      "source": "Feid",
+      "target": "latin",
+      "value": 1
+    },
+    {
+      "source": "The Killers",
+      "target": "indie",
+      "value": 1
+    },
+    {
+      "source": "The Killers",
+      "target": "indie rock",
+      "value": 1
+    },
+    {
+      "source": "The Killers",
+      "target": "rock",
+      "value": 1
+    },
+    {
+      "source": "The Killers",
+      "target": "alternative",
+      "value": 1
+    },
+    {
+      "source": "Steve Lacy",
+      "target": "free jazz",
+      "value": 1
+    },
+    {
+      "source": "Steve Lacy",
+      "target": "jazz",
+      "value": 1
+    },
+    {
+      "source": "Steve Lacy",
+      "target": "saxophone",
+      "value": 1
+    },
+    {
+      "source": "Steve Lacy",
+      "target": "rnb",
+      "value": 1
+    },
+    {
+      "source": "Juice WRLD",
+      "target": "trap",
+      "value": 1
+    },
+    {
+      "source": "Juice WRLD",
+      "target": "rap",
+      "value": 1
+    },
+    {
+      "source": "Juice WRLD",
+      "target": "emo rap",
+      "value": 1
+    },
+    {
+      "source": "Juice WRLD",
+      "target": "hip-hop",
+      "value": 1
+    },
+    {
+      "source": "The Raconteurs",
+      "target": "rock",
+      "value": 1
+    },
+    {
+      "source": "The Raconteurs",
+      "target": "alternative rock",
+      "value": 1
+    },
+    {
+      "source": "The Raconteurs",
+      "target": "indie rock",
+      "value": 1
+    },
+    {
+      "source": "The Raconteurs",
+      "target": "alternative",
+      "value": 1
+    },
+    {
+      "source": "Royal Blood",
+      "target": "rock",
+      "value": 1
+    },
+    {
+      "source": "Royal Blood",
+      "target": "garage rock",
+      "value": 1
+    },
+    {
+      "source": "Royal Blood",
+      "target": "alternative rock",
+      "value": 1
+    },
+    {
+      "source": "Royal Blood",
+      "target": "blues rock",
+      "value": 1
+    },
+    {
+      "source": "ROSALÍA",
+      "target": "pop",
+      "value": 1
+    },
+    {
+      "source": "ROSALÍA",
+      "target": "flamenco",
+      "value": 1
+    },
+    {
+      "source": "ROSALÍA",
+      "target": "spanish",
+      "value": 1
+    },
+    {
+      "source": "ROSALÍA",
+      "target": "flamenco nuevo",
+      "value": 1
+    },
+    {
+      "source": "Green Day",
+      "target": "punk rock",
+      "value": 1
+    },
+    {
+      "source": "Green Day",
+      "target": "rock",
+      "value": 1
+    },
+    {
+      "source": "Green Day",
+      "target": "punk",
+      "value": 1
+    },
+    {
+      "source": "Green Day",
+      "target": "pop punk",
+      "value": 1
+    },
+    {
+      "source": "Eslabon Armado",
+      "target": "corridos tumbados",
+      "value": 1
+    },
+    {
+      "source": "Eslabon Armado",
+      "target": "sierreno",
+      "value": 1
+    },
+    {
+      "source": "Eslabon Armado",
+      "target": "corridos",
+      "value": 1
+    },
+    {
+      "source": "Eslabon Armado",
+      "target": "mexico",
+      "value": 1
+    },
+    {
+      "source": "Frank Ocean",
+      "target": "rnb",
+      "value": 1
+    },
+    {
+      "source": "Frank Ocean",
+      "target": "soul",
+      "value": 1
+    },
+    {
+      "source": "Frank Ocean",
+      "target": "hip-hop",
+      "value": 1
+    },
+    {
+      "source": "Frank Ocean",
+      "target": "r&b",
+      "value": 1
+    },
+    {
+      "source": "d4vd",
+      "target": "pop",
+      "value": 1
+    },
+    {
+      "source": "d4vd",
+      "target": "rnb",
+      "value": 1
+    },
+    {
+      "source": "d4vd",
+      "target": "rock",
+      "value": 1
+    },
+    {
+      "source": "d4vd",
+      "target": "dream pop",
+      "value": 1
+    },
+    {
+      "source": "The White Stripes",
+      "target": "rock",
+      "value": 1
+    },
+    {
+      "source": "The White Stripes",
+      "target": "alternative rock",
+      "value": 1
+    },
+    {
+      "source": "The White Stripes",
+      "target": "alternative",
+      "value": 1
+    },
+    {
+      "source": "The White Stripes",
+      "target": "indie",
+      "value": 1
+    },
+    {
+      "source": "Soda Stereo",
+      "target": "rock argentino",
+      "value": 1
+    },
+    {
+      "source": "Soda Stereo",
+      "target": "rock",
+      "value": 1
+    },
+    {
+      "source": "Soda Stereo",
+      "target": "rock en espanol",
+      "value": 1
+    },
+    {
+      "source": "Soda Stereo",
+      "target": "argentina",
+      "value": 1
+    },
+    {
+      "source": "Red Hot Chili Peppers",
+      "target": "rock",
+      "value": 1
+    },
+    {
+      "source": "Red Hot Chili Peppers",
+      "target": "alternative rock",
+      "value": 1
+    },
+    {
+      "source": "Red Hot Chili Peppers",
+      "target": "funk rock",
+      "value": 1
+    },
+    {
+      "source": "Red Hot Chili Peppers",
+      "target": "alternative",
+      "value": 1
+    }
+  ]
+}

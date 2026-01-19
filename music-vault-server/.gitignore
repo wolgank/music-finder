@@ -1,0 +1,22 @@
+# Dependencias
+node_modules/
+
+# Configuración sensible (¡Muy importante!)
+.env
+
+# Base de datos SQLite y temporales
+*.db
+*.db-shm
+*.db-wal
+backups/
+
+# Reportes y archivos de datos generados
+*_report.txt
+audit_report_detailed.txt
+library_index.json
+data/
+
+# Compilación de TypeScript
+dist/
+#private data
+

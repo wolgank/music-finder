@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Vault 🌌</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        midnight: { bg: '#000000', card: '#121212', accent: '#1DB954', text: '#FFFFFF' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #000; color: #fff; overflow-x: hidden; }
+        #3d-graph { width: 100%; height: 85vh; border-radius: 12px; overflow: hidden; position: relative; }
+        .fade-enter-active, .fade-leave-active { transition: opacity 0.3s ease; }
+        .fade-enter-from, .fade-leave-to { opacity: 0; }
+        
+        /* Scrollbar fina */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #121212; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+    </style>
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="font-sans antialiased min-h-screen">
+
+    <div id="app" class="container mx-auto px-4 py-6 max-w-[95%]">
+        
+        <header class="flex flex-col md:flex-row justify-between items-center mb-6 gap-4">
+            <h1 class="text-4xl font-black tracking-tighter flex items-center gap-3 bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-emerald-600">
+                MUSIC VAULT
+            </h1>
+            
+            <div class="bg-[#1a1a1a] p-1 rounded-full flex gap-1 border border-[#333]">
+                <button @click="currentView = 'list'" :class="{'bg-[#333] text-white': currentView === 'list', 'text-gray-400': currentView !== 'list'}" class="px-6 py-2 rounded-full transition-all flex items-center gap-2 font-bold text-sm">
+                    <i data-lucide="list" class="w-4 h-4"></i> Lista
+                </button>
+                <button @click="initGraph" :class="{'bg-green-600 text-white shadow-[0_0_15px_rgba(34,197,94,0.4)]': currentView === 'graph', 'text-gray-400': currentView !== 'graph'}" class="px-6 py-2 rounded-full transition-all flex items-center gap-2 font-bold text-sm">
+                    <i data-lucide="share-2" class="w-4 h-4"></i> Grafo 3D
+                </button>
+            </div>
+        </header>
+
+        <div v-show="currentView === 'list'" class="animate-fade-in">
+             <div class="relative max-w-xl mx-auto mb-8">
+                <i data-lucide="search" class="absolute left-4 top-3.5 text-gray-500 w-5 h-5"></i>
+                <input v-model="searchQuery" type="text" placeholder="Buscar artista o canción..." class="w-full bg-[#1a1a1a] rounded-full py-3 pl-12 border border-[#333] focus:border-green-500 focus:outline-none text-white transition-all placeholder-gray-600">
+            </div>
+
+            <div class="space-y-4">
+                 <div v-for="item in filteredMusic" :key="item.artist" class="bg-[#121212] rounded-xl border border-[#222] overflow-hidden hover:border-[#444] transition-all">
+                    
+                    <div @click="toggleArtist(item)" class="p-4 cursor-pointer flex items-center gap-5 hover:bg-[#1a1a1a] transition-colors">
+                        <div class="w-20 h-20 rounded-full overflow-hidden bg-black shadow-lg border border-[#333] relative flex-shrink-0">
+                            <img v-if="imagesMap[item.artist]" :src="imagesMap[item.artist]" class="w-full h-full object-cover">
+                            <div v-else class="w-full h-full flex items-center justify-center text-gray-500 font-bold bg-[#1a1a1a]">{{ item.artist.substring(0,2) }}</div>
+                        </div>
+                        <div class="flex-grow">
+                            <h3 class="font-bold text-2xl text-white group-hover:text-green-400">{{ item.artist }}</h3>
+                            <div class="flex gap-3 mt-1 text-sm text-gray-400">
+                                <span class="flex items-center gap-1"><i data-lucide="play" class="w-3 h-3"></i> {{ formatNumber(item.stats.total_plays) }} plays</span>
+                                <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3 h-3"></i> {{ formatNumber(item.stats.total_minutes) }} min</span>
+                            </div>
+                        </div>
+                        <div>
+                            <i :data-lucide="item.expanded ? 'chevron-up' : 'chevron-down'" class="text-gray-500"></i>
+                        </div>
+                    </div>
+
+                    <div v-if="item.expanded || searchQuery" class="bg-[#0a0a0a] border-t border-[#222] p-4">
+                        <table class="w-full text-left text-sm text-gray-400">
+                            <thead class="text-xs uppercase tracking-wider text-gray-600 border-b border-[#222]">
+                                <tr>
+                                    <th class="py-2 pl-2 w-10">#</th>
+                                    <th class="py-2">Canción</th>
+                                    <th class="py-2 text-right pr-2">Plays</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-[#1a1a1a]">
+                                <tr v-for="(track, tIndex) in item.top_tracks.slice(0, 10)" :key="track.track_name" class="group hover:bg-[#151515]">
+                                    <td class="py-3 pl-2 text-green-600 font-mono">{{ tIndex + 1 }}</td>
+                                    <td class="py-3 text-gray-300 font-medium group-hover:text-white">
+                                        {{ track.track_name }}
+                                        <span v-if="isMatch(track.track_name)" class="ml-2 text-[10px] bg-green-900 text-green-300 px-1.5 rounded font-bold">MATCH</span>
+                                    </td>
+                                    <td class="py-3 pr-2 text-right">{{ track.plays }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div v-if="item.top_tracks.length > 10" class="mt-3 text-center text-xs text-gray-600">
+                            Mostrando top 10 de {{ item.top_tracks.length }} canciones
+                        </div>
+                    </div>
+                 </div>
+            </div>
+            
+            <div v-if="limit < fullData.length && !searchQuery" class="text-center mt-8">
+                <button @click="limit += 20; refreshIcons()" class="text-gray-400 hover:text-white underline text-sm">Cargar más artistas</button>
+            </div>
+        </div>
+
+        <div v-show="currentView === 'graph'" class="relative animate-fade-in">
+            <div id="3d-graph"></div>
+            
+            <div class="absolute top-4 left-4 bg-black/80 backdrop-blur-md p-4 rounded-xl border border-[#333] shadow-2xl pointer-events-none select-none">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="w-3 h-3 rounded-full bg-white"></span> <span class="text-sm font-bold">Artistas</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <span class="w-3 h-3 rounded-full bg-purple-500 shadow-[0_0_10px_#a855f7]"></span> <span class="text-sm font-bold text-purple-400">Géneros</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        import { createApp, nextTick } from 'https://esm.sh/vue@3/dist/vue.esm-browser.js';
+        import ForceGraph3D from 'https://esm.sh/3d-force-graph';
+        import SpriteText from 'https://esm.sh/three-spritetext';
+        import * as THREE from 'https://esm.sh/three';
+
+        createApp({
+            data() {
+                return {
+                    currentView: 'list',
+                    fullData: [],
+                    searchQuery: '',
+                    limit: 30,
+                    graphInitialized: false,
+                    imagesMap: {}, 
+                    Graph: null
+                }
+            },
+            computed: {
+                filteredMusic() {
+                    let data = this.fullData;
+                    if (this.searchQuery) {
+                        const q = this.searchQuery.toLowerCase();
+                        // Filtrar por artista O por canción
+                        data = data.filter(item => 
+                            item.artist.toLowerCase().includes(q) || 
+                            item.top_tracks.some(t => t.track_name.toLowerCase().includes(q))
+                        );
+                    }
+                    return data.slice(0, this.limit); // Paginación
+                }
+            },
+            methods: {
+                formatNumber(n) { return new Intl.NumberFormat().format(n); },
+                isMatch(text) { return this.searchQuery && text.toLowerCase().includes(this.searchQuery.toLowerCase()); },
+                
+                async fetchData() {
+                    try {
+                        const res = await fetch('/api/data');
+                        const json = await res.json();
+                        // Inicializamos 'expanded' en false
+                        this.fullData = json.my_music.map(item => ({...item, expanded: false}));
+                        
+                        // Carga inicial de imágenes (lenta en background)
+                        this.loadImagesInBatches(0, 50);
+                    } catch (e) { console.error("Error data:", e); }
+                },
+
+                toggleArtist(item) {
+                    item.expanded = !item.expanded;
+                    this.refreshIcons();
+                },
+
+                refreshIcons() {
+                    if(window.lucide) nextTick(() => window.lucide.createIcons());
+                },
+
+                async loadImagesInBatches(start, end) {
+                    const slice = this.fullData.slice(start, end);
+                    // Pedimos las imágenes una por una pero sin bloquear
+                    for(const item of slice) {
+                        if(this.imagesMap[item.artist]) continue;
+                        fetch(`/api/artist-info?name=${encodeURIComponent(item.artist)}`)
+                            .then(res => res.json())
+                            .then(data => {
+                                if(data.found && data.image) {
+                                    this.imagesMap[item.artist] = data.image;
+                                }
+                            }).catch(()=>{});
+                    }
+                },
+
+                async initGraph() {
+                    this.currentView = 'graph';
+                    if (this.graphInitialized) return;
+
+                    nextTick(async () => {
+                        try {
+                            const res = await fetch('/api/graph');
+                            if (!res.ok) throw new Error("Ejecuta build_graph.bun.js");
+                            const gData = await res.json();
+
+                            const elem = document.getElementById('3d-graph');
+                            
+                            this.Graph = ForceGraph3D()(elem)
+                                .graphData(gData)
+                                .nodeLabel('id')
+                                // FÍSICA CORREGIDA: Más repulsión para que no se amontonen
+                                .d3Force('charge', d3.forceManyBody().strength(-400)) 
+                                .d3Force('link', d3.forceLink().distance(60))
+                                .backgroundColor('#000000')
+                                .showNavInfo(false)
+                                // OBJETOS 3D
+                                .nodeThreeObject(node => {
+                                    // LIMITAR TAMAÑO: Usamos Math.sqrt para que 3000 plays no sean 3000 pixeles
+                                    const size = Math.max(4, Math.min(15, Math.sqrt(node.val || 1)));
+
+                                    if (node.group === 'artist') {
+                                        const imgUrl = this.imagesMap[node.id];
+                                        if (imgUrl) {
+                                            // Esfera con textura
+                                            const texture = new THREE.TextureLoader().load(imgUrl);
+                                            texture.colorSpace = THREE.SRGBColorSpace;
+                                            const material = new THREE.MeshBasicMaterial({ map: texture });
+                                            const geometry = new THREE.SphereGeometry(size, 32, 32);
+                                            return new THREE.Mesh(geometry, material);
+                                        } else {
+                                            // Esfera blanca simple
+                                            const geometry = new THREE.SphereGeometry(size * 0.8, 32, 32);
+                                            const material = new THREE.MeshLambertMaterial({ color: 0xffffff });
+                                            return new THREE.Mesh(geometry, material);
+                                        }
+                                    } 
+                                    else if (node.group === 'tag') {
+                                        // Texto Flotante
+                                        const sprite = new SpriteText(node.id);
+                                        sprite.color = '#a855f7';
+                                        sprite.textHeight = 3 + (size / 3);
+                                        sprite.fontFace = 'Arial';
+                                        sprite.fontWeight = 'bold';
+                                        sprite.backgroundColor = 'rgba(0,0,0,0.5)'; // Fondo para legibilidad
+                                        sprite.padding = 2;
+                                        return sprite;
+                                    }
+                                })
+                                .linkWidth(0.5)
+                                .linkOpacity(0.3)
+                                .linkColor(() => '#333');
+
+                            // Luces
+                            const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+                            const dirLight = new THREE.DirectionalLight(0xffffff, 1);
+                            dirLight.position.set(10, 10, 10);
+                            this.Graph.scene().add(ambientLight);
+                            this.Graph.scene().add(dirLight);
+
+                            this.graphInitialized = true;
+
+                        } catch (e) {
+                            alert("⚠️ Error: " + e.message);
+                        }
+                    });
+                }
+            },
+            mounted() {
+                this.fetchData();
+                this.refreshIcons();
+            },
+            updated() {
+                this.refreshIcons();
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>
