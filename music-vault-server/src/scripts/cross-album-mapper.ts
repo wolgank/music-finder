@@ -1,6 +1,7 @@
 import db from '../db';
 import * as fs from 'fs';
 const Levenshtein = require('fast-levenshtein');
+import { LIBRARY_INDEX_PATH } from '../paths';
 
 function cleanText(text: string): string {
     return (text || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9 ]/g, "").trim();
@@ -22,7 +23,7 @@ function isTrustedMatch(nameH: string, nameT: string): boolean {
 }
 
 async function crossAlbumMapping() {
-    const INDEX_FILE = 'library_index.json';
+    const INDEX_FILE = LIBRARY_INDEX_PATH;
     if (!fs.existsSync(INDEX_FILE)) return;
 
     const index = JSON.parse(fs.readFileSync(INDEX_FILE, 'utf-8'));

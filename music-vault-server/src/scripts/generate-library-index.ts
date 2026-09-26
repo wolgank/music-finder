@@ -1,5 +1,6 @@
 import db from '../db';
 import * as fs from 'fs';
+import { LIBRARY_INDEX_PATH } from '../paths';
 
 async function updateIndex() {
     console.log("🔍 Sincronizando music_mappings.json con la Base de Datos...");
@@ -64,7 +65,7 @@ async function updateIndex() {
     });
 
     // 4. Guardar el nuevo índice
-    fs.writeFileSync('library_index.json', JSON.stringify(libraryIndex, null, 2));
+    fs.writeFileSync(LIBRARY_INDEX_PATH, JSON.stringify(libraryIndex, null, 2));
 
     // Estadísticas
     const total = libraryIndex.length;
@@ -73,7 +74,7 @@ async function updateIndex() {
     const missing = total - mapped - nonExistent;
 
     console.log("\n" + "=".repeat(50));
-    console.log(`✅ library_index.json generado con éxito.`);
+    console.log(`✅ Índice generado: ${LIBRARY_INDEX_PATH}`);
     console.log(`🎵 Total entradas: ${total}`);
     reportStat("Completadas", mapped, "🟢");
     reportStat("Marcadas como NO EXISTE", nonExistent, "⚪");

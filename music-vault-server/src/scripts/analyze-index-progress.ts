@@ -1,12 +1,14 @@
 import db from '../db';
 import * as fs from 'fs';
+import { join } from 'path';
+import { LIBRARY_INDEX_PATH, REPORTS_DIR } from '../paths';
 
 async function analyzeLibrary() {
-    const INDEX_FILE = 'library_index.json';
-    const REPORT_FILE = 'missing_tracks_report.txt';
+    const INDEX_FILE = LIBRARY_INDEX_PATH;
+    const REPORT_FILE = join(REPORTS_DIR, 'missing_tracks_report.txt');
 
     if (!fs.existsSync(INDEX_FILE)) {
-        console.error("🔴 Error: No se encontró library_index.json.");
+        console.error(`🔴 Error: No se encontró ${LIBRARY_INDEX_PATH}.`);
         return;
     }
 

@@ -4,6 +4,7 @@ import * as fs from 'fs';
 import { randomUUID } from "crypto";
 const Levenshtein = require('fast-levenshtein');
 import "dotenv/config";
+import { LIBRARY_INDEX_PATH } from '../paths';
 
 const tidal = new TidalClient(process.env.TIDAL_CLIENT_ID!, process.env.TIDAL_CLIENT_SECRET!);
 const sleep = (ms: number) => new Promise(r => setTimeout(r, ms));
@@ -21,9 +22,9 @@ function isFlexibleMatch(nameH: string, nameT: string): boolean {
 }
 
 async function harvestFromIndex() {
-    const INDEX_FILE = 'library_index.json';
+    const INDEX_FILE = LIBRARY_INDEX_PATH;
     if (!fs.existsSync(INDEX_FILE)) {
-        console.error("🔴 Error: No se encontró library_index.json");
+        console.error(`🔴 Error: No se encontró ${LIBRARY_INDEX_PATH}`);
         return;
     }
 
@@ -132,7 +133,7 @@ async function harvestFromIndex() {
         }
     }
 
-    console.log("\n\n🏁 Cosecha finalizada. Proporción de éxito guardada en library_index.json.");
+    console.log(`\n\n🏁 Cosecha finalizada. Progreso guardado en ${LIBRARY_INDEX_PATH}.`);
 }
 
 harvestFromIndex();

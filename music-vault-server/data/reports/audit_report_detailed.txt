@@ -1,0 +1,78 @@
+import * as fs from 'fs';
+
+async function analyzeLibrary() {
+    const INDEX_FILE = 'library_index.json';
+    const REPORT_FILE = 'missing_tracks_report.txt';
+
+    if (!fs.existsSync(INDEX_FILE)) {
+        console.error("🔴 Error: No se encontró library_index.json.");
+        return;
+    }
+
+    console.log("📊 ANALIZANDO ESTADO DE LA BIBLIOTECA...");
+    const index = JSON.parse(fs.readFileSync(INDEX_FILE, 'utf-8'));
+
+    const total = index.length;
+    let mapped = 0;
+    let incomplete = 0;
+    let discarded = 0;
+    
+    // Estructura para el reporte detallado
+    const missingData: Record<string, Record<string, string[]>> = {};
+
+    index.forEach((item: any) => {
+        if (item.status === "MAPPED") {
+            mapped++;
+        } else if (item.status === "INCOMPLETE") {
+            incomplete++;
+            const art = item.history.artist_name;
+            const alb = item.history.album_name;
+            const trk = item.history.track_name;
+
+            if (!missingData[art]) missingData[art] = {};
+            if (!missingData[art][alb]) missingData[art][alb] = [];
+            missingData[art][alb].push(trk);
+        } else if (item.status === "DISCARDED") {
+            discarded++;
+        }
+    });
+
+    // --- GENERAR ARCHIVO DE TEXTO ---
+    let fileContent = `REPORTE DETALLADO DE CANCIONES FALTANTES\n`;
+    fileContent += `Generado el: ${new Date().toLocaleString()}\n`;
+    fileContent += `=".repeat(60)\n\n`;
+
+    const sortedArtists = Object.keys(missingData).sort();
+    
+    sortedArtists.forEach(artist => {
+        fileContent += `👤 ARTISTA: ${artist}\n`;
+        const albums = Object.keys(missingData[artist]).sort();
+        
+        albums.forEach(album => {
+            fileContent += `   💿 ÁLBUM: ${album}\n`;
+            missingData[artist][album].sort().forEach(track => {
+                fileContent += `      - ${track}\n`;
+            });
+        });
+        fileContent += `\n`;
+    });
+
+    fs.writeFileSync(REPORT_FILE, fileContent);
+
+    // --- RESUMEN POR CONSOLA ---
+    const mappedPct = ((mapped / total) * 100).toFixed(1);
+    const incompletePct = ((incomplete / total) * 100).toFixed(1);
+
+    console.log("\n" + "=".repeat(50));
+    console.log("📈 RESUMEN DE INTEGRIDAD");
+    console.log("=".repeat(50));
+    console.log(`🟢 Mapeados:      ${mapped} (${mappedPct}%)`);
+    console.log(`🚩 Pendientes:    ${incomplete} (${incompletePct}%)`);
+    console.log(`⚪ Descartados:   ${discarded}`);
+    console.log(`🎵 Total:         ${total}`);
+    console.log("=".repeat(50));
+    console.log(`📝 Reporte detallado guardado en: ${REPORT_FILE}`);
+    console.log("=".repeat(50));
+}
+
+analyzeLibrary();

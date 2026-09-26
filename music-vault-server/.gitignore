@@ -1,22 +1,19 @@
 # Dependencias
 node_modules/
 
-# Configuración sensible (¡Muy importante!)
+# Configuración sensible
 .env
 
-# Base de datos SQLite y temporales
-*.db
-*.db-shm
-*.db-wal
-backups/
-
-# Reportes y archivos de datos generados
-*_report.txt
-audit_report_detailed.txt
-library_index.json
-data/
-
-# Compilación de TypeScript
+# Compilación
 dist/
-#private data
 
+# Journal SQLite de la DB activa (efímeros; no tocar data/orphaned/)
+data/music_vault.db-shm
+data/music_vault.db-wal
+
+# Se versionan a propósito para recuperación:
+# - data/music_vault.db
+# - data/library_index.json
+# - data/reports/
+# - data/orphaned/   (WAL/SHM residuales)
+# - backups/

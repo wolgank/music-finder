@@ -1,10 +1,11 @@
 // music-vault-server/src/db/index.ts
 import { Database } from "bun:sqlite";
+import { DB_PATH } from "../paths";
 
-const db = new Database("music_vault.db", { create: true });
+const db = new Database(DB_PATH, { create: true });
 db.exec("PRAGMA journal_mode = WAL;");
 
-console.log("🗄️  Base de Datos conectada: music_vault.db");
+console.log(`🗄️  Base de Datos conectada: ${DB_PATH}`);
 
 // --- 1. HISTORIAL CRUDO (Tu pasado en Spotify) ---
 db.run(`

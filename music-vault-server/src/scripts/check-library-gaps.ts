@@ -1,5 +1,7 @@
 import db from '../db';
 import * as fs from 'fs';
+import { join } from 'path';
+import { REPORTS_DIR } from '../paths';
 
 async function checkGaps() {
     console.log("📊 INICIANDO AUDITORÍA POR NOMBRE EXACTO...");
@@ -61,14 +63,15 @@ async function checkGaps() {
     report += `\n2. ÁLBUMES QUE NO TIENEN REGISTRO EN LA TABLA 'ALBUMS' (${missingAlbums.size})\n`;
     Array.from(missingAlbums).sort().forEach(alb => report += `- ${alb}\n`);
 
-    fs.writeFileSync('audit_report_detailed.txt', report);
+    const reportPath = join(REPORTS_DIR, 'audit_report_detailed.txt');
+    fs.writeFileSync(reportPath, report);
 
     console.log("\n" + "=".repeat(50));
     console.log(`✅ Auditoría finalizada.`);
     console.log(`👤 Artistas faltantes: ${missingArtists.size}`);
     console.log(`💿 Álbumes faltantes:  ${missingAlbums.size}`);
     console.log("=".repeat(50));
-    console.log(`📝 Revisa 'audit_report_detailed.txt' para ver la lista real.`);
+    console.log(`📝 Revisa '${reportPath}' para ver la lista real.`);
 }
 
 checkGaps();

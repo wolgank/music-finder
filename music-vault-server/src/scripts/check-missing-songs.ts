@@ -1,6 +1,8 @@
 // music-vault-server/src/scripts/check-missing-songs.ts
 import db from '../db';
 import * as fs from 'fs';
+import { join } from 'path';
+import { REPORTS_DIR } from '../paths';
 
 async function runComparison(): Promise<void> {
     try {
@@ -119,8 +121,9 @@ async function runComparison(): Promise<void> {
             reportContent += `[ ] ${s.history.artist_name} - ${s.history.album_name} - ${s.history.track_name}\n`;
         });
 
-        fs.writeFileSync('missing_songs_report.txt', reportContent);
-        console.log("✅ Reporte actualizado. Los álbumes que ya están en DB fueron filtrados de la Sección 3.");
+        const reportPath = join(REPORTS_DIR, 'missing_songs_report.txt');
+        fs.writeFileSync(reportPath, reportContent);
+        console.log(`✅ Reporte actualizado: ${reportPath}`);
 
     } catch (error) {
         console.error("\n🔴 Error crítico:", (error as Error).message);
